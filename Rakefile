@@ -4,7 +4,9 @@
 Dir['lib/tasks/*.rake'].each { |rake| load rake }
 
 require "rubygems"
-require "bundler/setup"
+unless ENV['TRAVIS']
+  require "bundler/setup"
+end
 require 'rspec/core/rake_task'
 
 RSpec::Core::RakeTask.new(:spec)

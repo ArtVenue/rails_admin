@@ -6,6 +6,7 @@
 .bundle
 .idea/
 .rvmrc
+.rbx
 .yardoc
 /.emacs.desktop
 /rails_admin.gems
