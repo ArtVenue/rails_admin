@@ -46,7 +46,7 @@
               .field
                 %label{:for => "schema_include_#{association[:name]}_#{list}_#{associated_model_field.name}"}
                   = associated_model.human_attribute_name(associated_model_field.name)
-                = check_box_tag "schema[include][#{association[:name]}][#{list}][]", associated_model_field.name, true, { :id => "schema_include_#{association[:name]}_#{list}_#{associated_model_field.name}" }
+                = check_box_tag "schema[include][#{association[:name]}][#{list}][]", associated_model_field.name, false, { :id => "schema_include_#{association[:name]}_#{list}_#{associated_model_field.name}" }
                 %p.help= t('admin.export.display', :name => associated_model_field.name, :type => associated_model_field.type)
         %fieldset
           %legend= t('admin.export.options_for', :name => 'csv')
